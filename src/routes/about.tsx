@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
-import { Heart, ShieldCheck, Sprout, Award, HandshakeIcon } from "lucide-react";
+import { Heart, ShieldCheck, Sprout, Award, HandHeart } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/about")({
 
 const values = [
   { icon: ShieldCheck, title: "Trust", desc: "We believe in transparent and honest guidance." },
-  { icon: HandshakeIcon, title: "Support", desc: "We provide proper assistance at every step." },
+  { icon: HandHeart, title: "Support", desc: "We provide proper assistance at every step." },
   { icon: Sprout, title: "Growth", desc: "We focus on helping students, professionals, and businesses grow." },
   { icon: Award, title: "Quality", desc: "We work with reliable education and service partners." },
   { icon: Heart, title: "Commitment", desc: "We are committed to delivering the right support for every enquiry." },
