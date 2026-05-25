@@ -38,8 +38,8 @@ function Page() {
             <h2 className="font-serif text-2xl font-bold">Contact Details</h2>
             <ul className="mt-6 space-y-4 text-sm">
               <li className="flex items-start gap-3"><MapPin className="mt-0.5 h-5 w-5 text-gold" /><div><div className="font-semibold">Pravis Learning</div><div className="text-muted-foreground">Chennai, Tamil Nadu</div></div></li>
-              <li className="flex items-start gap-3"><Phone className="mt-0.5 h-5 w-5 text-gold" /><div><div className="font-semibold">Phone</div><div className="text-muted-foreground">Add your phone number</div></div></li>
-              <li className="flex items-start gap-3"><Mail className="mt-0.5 h-5 w-5 text-gold" /><div><div className="font-semibold">Email</div><div className="text-muted-foreground">Add your official email ID</div></div></li>
+              <li className="flex items-start gap-3"><Phone className="mt-0.5 h-5 w-5 text-gold" /><div><div className="font-semibold">Phone</div><a href="tel:+917305075766" className="text-muted-foreground hover:text-primary">+91 73050 75766</a></div></li>
+              <li className="flex items-start gap-3"><Mail className="mt-0.5 h-5 w-5 text-gold" /><div><div className="font-semibold">Email</div><a href="mailto:info@pravislearning.com" className="text-muted-foreground hover:text-primary">info@pravislearning.com</a></div></li>
               <li className="flex items-start gap-3"><Clock className="mt-0.5 h-5 w-5 text-gold" /><div><div className="font-semibold">Working Hours</div><div className="text-muted-foreground">Monday to Saturday · 10:00 AM – 6:00 PM</div></div></li>
             </ul>
           </div>

@@ -43,6 +43,8 @@ export function Footer() {
         <div>
           <h4 className="mb-3 font-serif text-base text-gold">Get in Touch</h4>
           <p className="text-sm text-primary-foreground/85">Chennai, Tamil Nadu</p>
+          <p className="text-sm text-primary-foreground/85"><a href="tel:+917305075766" className="hover:text-gold">+91 73050 75766</a></p>
+          <p className="text-sm text-primary-foreground/85"><a href="mailto:info@pravislearning.com" className="hover:text-gold">info@pravislearning.com</a></p>
           <p className="text-sm text-primary-foreground/85">Mon–Sat · 10:00 AM – 6:00 PM</p>
           <Link
             to="/contact"
