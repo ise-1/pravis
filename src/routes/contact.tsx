@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { useState } from "react";
-import { Mail, MapPin, Phone, Clock, CheckCircle2 } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, CheckCircle2, Loader2 } from "lucide-react";
+import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -25,8 +28,62 @@ const faqs = [
   { q: "Do you help companies with hiring?", a: "Yes — our talent partner services help companies connect with suitable, job-ready candidates." },
 ];
 
+const enquirySchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(200),
+  mobile: z.string().trim().min(4, "Enter a valid mobile number").max(30),
+  email: z.string().trim().email("Enter a valid email").max(255),
+  city: z.string().trim().max(100).optional().or(z.literal("")),
+  interested_service: z.string().min(1, "Please select a service").max(100),
+  details: z.string().trim().max(500).optional().or(z.literal("")),
+  message: z.string().trim().max(2000).optional().or(z.literal("")),
+});
+
 function Page() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const raw = {
+      name: String(fd.get("name") ?? ""),
+      mobile: String(fd.get("mobile") ?? ""),
+      email: String(fd.get("email") ?? ""),
+      city: String(fd.get("city") ?? ""),
+      interested_service: String(fd.get("interested_service") ?? ""),
+      details: String(fd.get("details") ?? ""),
+      message: String(fd.get("message") ?? ""),
+    };
+
+    const parsed = enquirySchema.safeParse(raw);
+    if (!parsed.success) {
+      toast.error(parsed.error.issues[0]?.message ?? "Please check the form");
+      return;
+    }
+
+    setSubmitting(true);
+    const { error } = await supabase.from("enquiries").insert({
+      name: parsed.data.name,
+      mobile: parsed.data.mobile,
+      email: parsed.data.email,
+      city: parsed.data.city || null,
+      interested_service: parsed.data.interested_service,
+      details: parsed.data.details || null,
+      message: parsed.data.message || null,
+    });
+    setSubmitting(false);
+
+    if (error) {
+      console.error("Enquiry submission failed", error);
+      toast.error("Something went wrong. Please try again or call us directly.");
+      return;
+    }
+    toast.success("Enquiry received — our team will be in touch shortly.");
+    setSubmitted(true);
+    form.reset();
+  }
+
   return (
     <>
       <PageHero eyebrow="Contact" title="We Are Here to Guide You" subtitle="Have questions about online degrees, franchise opportunities, study abroad partnership, hiring support, or insurance services? Contact Pravis Learning today." />
@@ -54,19 +111,19 @@ function Page() {
                 <CheckCircle2 className="mx-auto h-10 w-10 text-gold" />
                 <h3 className="mt-3 font-serif text-lg font-bold">Thank you!</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Thank you for contacting Pravis Learning. Our team has received your enquiry and will get in touch with you shortly.</p>
+                <button onClick={() => setSubmitted(false)} className="mt-4 text-sm font-semibold text-maroon hover:underline">
+                  Submit another enquiry
+                </button>
               </div>
             ) : (
-              <form
-                className="mt-6 space-y-4"
-                onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
-              >
+              <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
                 <Field label="Full Name" name="name" required />
                 <Field label="Mobile Number" name="mobile" type="tel" required />
                 <Field label="Email ID" name="email" type="email" required />
                 <Field label="City" name="city" />
                 <div>
-                  <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Interested Service</label>
-                  <select required className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:border-primary focus:outline-none">
+                  <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Interested Service *</label>
+                  <select name="interested_service" required className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:border-primary focus:outline-none">
                     <option value="">Select a service</option>
                     <option>Online Degree Admission</option>
                     <option>G-TEC Franchise</option>
@@ -79,10 +136,11 @@ function Page() {
                 <Field label="Preferred Course / Service Details" name="details" />
                 <div>
                   <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Message</label>
-                  <textarea rows={4} className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:border-primary focus:outline-none" />
+                  <textarea name="message" rows={4} className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:border-primary focus:outline-none" />
                 </div>
-                <button type="submit" className="w-full rounded-md bg-primary px-5 py-3 font-semibold text-primary-foreground transition-transform hover:scale-[1.02]">
-                  Submit Enquiry
+                <button type="submit" disabled={submitting} className="flex w-full items-center justify-center gap-2 rounded-md bg-primary px-5 py-3 font-semibold text-primary-foreground transition-transform hover:scale-[1.02] disabled:opacity-60">
+                  {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
+                  {submitting ? "Submitting…" : "Submit Enquiry"}
                 </button>
               </form>
             )}
