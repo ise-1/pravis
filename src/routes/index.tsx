@@ -7,10 +7,10 @@ import { Testimonials } from "@/components/Testimonials";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pravis Learning — Build Your Future" },
-      { name: "description", content: "Online degree admissions, career guidance, talent solutions, insurance support, and education franchise opportunities — based in Chennai." },
-      { property: "og:title", content: "Pravis Learning — Build Your Future" },
-      { property: "og:description", content: "Trusted partner for online degrees, franchise, talent and insurance advisory." },
+      { title: "Pravis Learning Chennai | Online Degree Admission & Career Guidance" },
+      { name: "description", content: "Pravis Learning offers online UG and PG degree admission guidance, career support, franchise opportunities, and education services in Chennai. Get expert counselling today." },
+      { property: "og:title", content: "Pravis Learning Chennai | Online Degree Admission & Career Guidance" },
+      { property: "og:description", content: "Pravis Learning offers online degree admission guidance, franchise opportunities, career support, and education services in Chennai." },
     ],
   }),
   component: HomePage,
