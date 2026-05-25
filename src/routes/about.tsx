@@ -83,6 +83,8 @@ function AboutPage() {
         </div>
       </section>
 
+      <Testimonials eyebrow="Voices of Trust" title="Stories from those we've helped" />
+
       <CTASection
         title="Start Your Journey with Pravis Learning"
         description="Whether you are planning to study, grow your career, start a business, or find the right service, Pravis Learning is ready to support you."
