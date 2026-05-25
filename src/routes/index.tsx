@@ -170,6 +170,8 @@ function HomePage() {
         </div>
       </section>
 
+      <Testimonials />
+
       <CTASection
         title="Need Guidance? Talk to Our Expert Team"
         description="Confused about choosing the right course, university, or business opportunity? Our team will guide you with the best available options based on your requirement."
