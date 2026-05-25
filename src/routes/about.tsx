@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
+import { Testimonials } from "@/components/Testimonials";
 import { Heart, ShieldCheck, Sprout, Award, HandHeart } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
