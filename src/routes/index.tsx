@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { GraduationCap, Building2, Globe2, Users, Shield, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import { CTASection } from "@/components/CTASection";
+import { Testimonials } from "@/components/Testimonials";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -168,6 +169,8 @@ function HomePage() {
           ))}
         </div>
       </section>
+
+      <Testimonials />
 
       <CTASection
         title="Need Guidance? Talk to Our Expert Team"
