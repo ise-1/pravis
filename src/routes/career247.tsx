@@ -287,14 +287,6 @@ function Career247Page() {
             >
               Contact Pravis Learning
             </Link>
-            <a
-              href="https://career247.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md border border-white/30 bg-white/5 px-7 py-3 font-semibold text-primary-foreground backdrop-blur hover:bg-white/10"
-            >
-              Explore Career247
-            </a>
           </div>
           <div className="absolute inset-x-0 bottom-0 h-px" style={{ background: "var(--gradient-gold)" }} />
         </div>
