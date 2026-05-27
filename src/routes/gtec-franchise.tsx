@@ -6,9 +6,9 @@ import { CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/gtec-franchise")({
   head: () => ({
     meta: [
-      { title: "G-TEC Franchise Opportunity — Pravis Learning" },
-      { name: "description", content: "Start your own IT and skill development training centre with G-TEC. Brand, course, and operational support included." },
-      { property: "og:title", content: "G-TEC Franchise Opportunity" },
+      { title: "G-TEC Expansion Partner Opportunity — Pravis Learning" },
+      { name: "description", content: "Become a G-TEC Expansion Partner and start your own IT and skill development training centre. Brand, course, and operational support included." },
+      { property: "og:title", content: "G-TEC Expansion Partner Opportunity" },
       { property: "og:description", content: "Build an education business with a trusted brand." },
     ],
   }),
