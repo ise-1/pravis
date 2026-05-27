@@ -190,7 +190,7 @@ function HomePage() {
                 name: "Career247",
                 title: "Career247 Career-Focused Learning",
                 desc: "Pravis Learning connects learners with Career247 for digital marketing, data analytics, business analytics, certification courses, online degree programs, and job-oriented skill development.",
-                cta: "Explore Career247",
+                cta: "View Details",
                 to: "/career247" as const,
               },
             ].map((p) => (
