@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import globalCampusLogo from "@/assets/logos/global-campus.png";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { CheckCircle2 } from "lucide-react";
@@ -30,6 +31,7 @@ function Page() {
         ctaLabel="Enquire Now"
         logoName="Global Campus"
         logoTagline="Study Abroad Counselling Partner"
+        logoSrc={globalCampusLogo}
       />
 
       <section className="mx-auto max-w-6xl px-4 py-20">

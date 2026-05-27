@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import insuranceLogo from "@/assets/logos/insurance4u.png";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { CheckCircle2 } from "lucide-react";
@@ -27,8 +28,9 @@ function Page() {
         title="Protect Your Future with the Right Guidance"
         subtitle="Insurance is essential for financial safety. Our team helps you understand the options in a simple, jargon-free way."
         ctaLabel="Enquire Now"
-        logoName="Pravis Insurance"
-        logoTagline="Insurance Advisory Partner"
+        logoName="Insurance4U"
+        logoTagline="Secure Today. Confident Tomorrow."
+        logoSrc={insuranceLogo}
       />
 
       <section className="mx-auto max-w-6xl px-4 py-20">
