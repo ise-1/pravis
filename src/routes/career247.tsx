@@ -116,14 +116,12 @@ function Career247Page() {
           offers industry-relevant programs designed to help learners improve their skills, prepare for career growth,
           and explore better job opportunities.
         </p>
-        <a
-          href="https://career247.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/contact"
           className="mt-8 inline-block rounded-md bg-gold px-7 py-3 font-semibold text-gold-foreground transition-transform hover:scale-105"
         >
-          Explore Career247
-        </a>
+          Enquire Now
+        </Link>
       </section>
 
       {/* About */}
@@ -289,14 +287,6 @@ function Career247Page() {
             >
               Contact Pravis Learning
             </Link>
-            <a
-              href="https://career247.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md border border-white/30 bg-white/5 px-7 py-3 font-semibold text-primary-foreground backdrop-blur hover:bg-white/10"
-            >
-              Explore Career247
-            </a>
           </div>
           <div className="absolute inset-x-0 bottom-0 h-px" style={{ background: "var(--gradient-gold)" }} />
         </div>

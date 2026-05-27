@@ -108,14 +108,12 @@ function PrepInstaPage() {
           prepare for campus placements, off-campus opportunities, technical rounds, HR interviews, and career-focused
           upskilling.
         </p>
-        <a
-          href="https://prepinsta.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/contact"
           className="mt-8 inline-block rounded-md bg-gold px-7 py-3 font-semibold text-gold-foreground transition-transform hover:scale-105"
         >
-          Explore PrepInsta
-        </a>
+          Enquire Now
+        </Link>
       </section>
 
       {/* About */}
@@ -248,14 +246,6 @@ function PrepInstaPage() {
             >
               Contact Pravis Learning
             </Link>
-            <a
-              href="https://prepinsta.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md border border-white/30 bg-white/5 px-7 py-3 font-semibold text-primary-foreground backdrop-blur hover:bg-white/10"
-            >
-              Explore PrepInsta
-            </a>
           </div>
           <div className="absolute inset-x-0 bottom-0 h-px" style={{ background: "var(--gradient-gold)" }} />
         </div>
