@@ -28,12 +28,12 @@ export function Header() {
             <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Learning</div>
           </div>
         </Link>
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-4 xl:flex">
           {nav.map((n) => (
             <Link
               key={n.to}
               to={n.to}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+              className="whitespace-nowrap text-[13px] font-medium text-foreground/80 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary font-semibold" }}
             >
               {n.label}
@@ -41,7 +41,7 @@ export function Header() {
           ))}
           <Link
             to="/contact"
-            className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-card)] transition-transform hover:scale-105"
+            className="whitespace-nowrap rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-card)] transition-transform hover:scale-105"
           >
             Enquire Now
           </Link>
@@ -49,7 +49,7 @@ export function Header() {
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen(!open)}
-          className="lg:hidden text-foreground"
+          className="xl:hidden text-foreground"
         >
           {open ? <X /> : <Menu />}
         </button>
