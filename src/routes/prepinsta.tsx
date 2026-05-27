@@ -92,6 +92,9 @@ function PrepInstaPage() {
         eyebrow="Placement Training Partner"
         title="PrepInsta Placement Training Partner"
         subtitle="Build placement-ready skills with PrepInsta through Pravis Learning."
+        ctaLabel="Enquire Now"
+        logoName="PrepInsta"
+        logoTagline="Placement Training Partner"
       />
 
       {/* Intro + Logo placeholder + CTA */}
