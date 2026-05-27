@@ -22,7 +22,14 @@ const who = ["Individuals","Families","Working professionals","Business owners",
 function Page() {
   return (
     <>
-      <PageHero eyebrow="Insurance" title="Protect Your Future with the Right Guidance" subtitle="Insurance is essential for financial safety. Our team helps you understand the options in a simple, jargon-free way." />
+      <PageHero
+        eyebrow="Insurance"
+        title="Protect Your Future with the Right Guidance"
+        subtitle="Insurance is essential for financial safety. Our team helps you understand the options in a simple, jargon-free way."
+        ctaLabel="Enquire Now"
+        logoName="Pravis Insurance"
+        logoTagline="Insurance Advisory Partner"
+      />
 
       <section className="mx-auto max-w-6xl px-4 py-20">
         <div className="grid gap-10 md:grid-cols-3">

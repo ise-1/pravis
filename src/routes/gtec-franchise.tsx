@@ -6,9 +6,9 @@ import { CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/gtec-franchise")({
   head: () => ({
     meta: [
-      { title: "G-TEC Franchise Opportunity — Pravis Learning" },
-      { name: "description", content: "Start your own IT and skill development training centre with G-TEC. Brand, course, and operational support included." },
-      { property: "og:title", content: "G-TEC Franchise Opportunity" },
+      { title: "G-TEC Expansion Partner Opportunity — Pravis Learning" },
+      { name: "description", content: "Become a G-TEC Expansion Partner and start your own IT and skill development training centre. Brand, course, and operational support included." },
+      { property: "og:title", content: "G-TEC Expansion Partner Opportunity" },
       { property: "og:description", content: "Build an education business with a trusted brand." },
     ],
   }),
@@ -23,7 +23,14 @@ const locations = ["Commercial areas","Near colleges","Near schools","Near resid
 function Page() {
   return (
     <>
-      <PageHero eyebrow="Franchise Opportunity" title="Start Your Own Education Business with G-TEC" subtitle="G-TEC is known for computer education, IT training, skill development, and professional courses — a strong fit for entrepreneurs entering the education industry." />
+      <PageHero
+        eyebrow="Expansion Partner Opportunity"
+        title="Start Your Own Education Business with G-TEC"
+        subtitle="G-TEC is known for computer education, IT training, skill development, and professional courses — a strong fit for entrepreneurs entering the education industry."
+        ctaLabel="Enquire Now"
+        logoName="G-TEC Expansion Partner"
+        logoTagline="IT & Skill Development Training"
+      />
 
       <section className="mx-auto max-w-6xl px-4 py-20">
         <div className="grid gap-10 md:grid-cols-2">

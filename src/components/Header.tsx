@@ -7,7 +7,7 @@ const nav = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/online-university", label: "Online University" },
-  { to: "/gtec-franchise", label: "G-TEC Franchise" },
+  { to: "/gtec-franchise", label: "G-TEC Expansion Partner" },
   { to: "/global-campus", label: "Global Campus" },
   { to: "/prepinsta", label: "PrepInsta" },
   { to: "/career247", label: "Career247" },

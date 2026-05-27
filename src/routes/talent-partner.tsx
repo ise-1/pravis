@@ -22,7 +22,14 @@ const why = ["Access to student and candidate network","Profile screening suppor
 function Page() {
   return (
     <>
-      <PageHero eyebrow="Talent Partner" title="Connecting Businesses with the Right Talent" subtitle="Finding the right candidate is critical. We help companies save time and improve hiring efficiency with curated, job-ready profiles." />
+      <PageHero
+        eyebrow="Talent Partner"
+        title="Connecting Businesses with the Right Talent"
+        subtitle="Finding the right candidate is critical. We help companies save time and improve hiring efficiency with curated, job-ready profiles."
+        ctaLabel="Enquire Now"
+        logoName="Talent Partner"
+        logoTagline="Hiring & Recruitment Services"
+      />
 
       <section className="mx-auto max-w-6xl px-4 py-20">
         <div className="grid gap-10 md:grid-cols-3">

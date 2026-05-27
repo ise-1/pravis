@@ -23,7 +23,14 @@ const benefits = ["Recognized brand support","University tie-up support","Market
 function Page() {
   return (
     <>
-      <PageHero eyebrow="Global Campus" title="Build Your Business in Study Abroad Counselling" subtitle="Help students plan their international education and build a long-term consulting business with Global Campus." />
+      <PageHero
+        eyebrow="Global Campus"
+        title="Build Your Business in Study Abroad Counselling"
+        subtitle="Help students plan their international education and build a long-term consulting business with Global Campus."
+        ctaLabel="Enquire Now"
+        logoName="Global Campus"
+        logoTagline="Study Abroad Counselling Partner"
+      />
 
       <section className="mx-auto max-w-6xl px-4 py-20">
         <div className="grid gap-10 md:grid-cols-2">
