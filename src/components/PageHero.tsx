@@ -54,16 +54,22 @@ export function PageHero({ eyebrow, title, subtitle, ctaLabel, ctaTo = "/contact
           <div className="flex justify-center md:justify-end">
             <div className="relative w-full max-w-sm rounded-2xl bg-white p-8 text-center shadow-[var(--shadow-elegant)]">
               <div className="absolute inset-x-6 top-0 h-[3px] rounded-b-full" style={{ background: "var(--gradient-gold)" }} />
-              <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-xl bg-secondary/30 p-3">
+              <div className="mx-auto flex h-28 w-full items-center justify-center px-2">
                 {logoSrc ? (
-                  <img src={logoSrc} alt={`${logoName} logo`} className="max-h-full max-w-full object-contain" />
+                  <img
+                    src={logoSrc}
+                    alt={`${logoName} logo`}
+                    loading="lazy"
+                    className="h-full w-auto max-w-[220px] object-contain sm:max-w-[200px]"
+                    style={{ minWidth: "160px" }}
+                  />
                 ) : (
                   <span className="px-2 text-center text-xs font-semibold uppercase tracking-wider text-primary/70">
-                    {logoName} Logo
+                    {logoName}
                   </span>
                 )}
               </div>
-              <h2 className="mt-5 font-serif text-2xl font-bold text-primary">{logoName}</h2>
+              <h2 className="mt-5 font-serif text-xl font-bold text-primary">{logoName}</h2>
               {logoTagline && <p className="mt-1 text-sm text-foreground/70">{logoTagline}</p>}
               <div className="mx-auto mt-4 h-px w-16" style={{ background: "var(--gradient-gold)" }} />
             </div>

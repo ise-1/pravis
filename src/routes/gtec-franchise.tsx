@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import gtecLogo from "@/assets/logos/gtec.png";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { CheckCircle2 } from "lucide-react";
@@ -30,6 +31,7 @@ function Page() {
         ctaLabel="Enquire Now"
         logoName="G-TEC Expansion Partner"
         logoTagline="IT & Skill Development Training"
+        logoSrc={gtecLogo}
       />
 
       <section className="mx-auto max-w-6xl px-4 py-20">

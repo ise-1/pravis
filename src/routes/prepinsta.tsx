@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import prepinstaLogo from "@/assets/logos/prepinsta.png";
 import { PageHero } from "@/components/PageHero";
 import {
   CheckCircle2,
@@ -95,6 +96,7 @@ function PrepInstaPage() {
         ctaLabel="Enquire Now"
         logoName="PrepInsta"
         logoTagline="Placement Training Partner"
+        logoSrc={prepinstaLogo}
       />
 
       {/* Intro + Logo placeholder + CTA */}

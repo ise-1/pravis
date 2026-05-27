@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { GraduationCap, Building2, Globe2, Users, Shield, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import prepinstaLogo from "@/assets/logos/prepinsta.png";
+import career247Logo from "@/assets/logos/career247.png";
 import { CTASection } from "@/components/CTASection";
 import { Testimonials } from "@/components/Testimonials";
 
@@ -181,6 +183,7 @@ function HomePage() {
             {[
               {
                 name: "PrepInsta",
+                logo: prepinstaLogo,
                 title: "PrepInsta Placement Training",
                 desc: "Pravis Learning connects students and colleges with PrepInsta for placement preparation, coding practice, aptitude training, interview preparation, and company-specific hiring preparation.",
                 cta: "View Details",
@@ -188,6 +191,7 @@ function HomePage() {
               },
               {
                 name: "Career247",
+                logo: career247Logo,
                 title: "Career247 Career-Focused Learning",
                 desc: "Pravis Learning connects learners with Career247 for digital marketing, data analytics, business analytics, certification courses, online degree programs, and job-oriented skill development.",
                 cta: "View Details",
@@ -198,11 +202,13 @@ function HomePage() {
                 key={p.name}
                 className="flex flex-col rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold"
               >
-                <div
-                  className="mb-5 flex h-20 w-40 items-center justify-center rounded-lg border-2 border-dashed border-gold bg-background font-serif text-xl font-bold text-primary"
-                  aria-label={`${p.name} logo placeholder`}
-                >
-                  {p.name}
+                <div className="mb-5 flex h-20 w-full max-w-[220px] items-center justify-start">
+                  <img
+                    src={p.logo}
+                    alt={`${p.name} logo`}
+                    loading="lazy"
+                    className="h-full w-auto max-w-[200px] object-contain"
+                  />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground">{p.title}</h3>
                 <p className="mt-3 flex-1 text-sm text-muted-foreground">{p.desc}</p>
