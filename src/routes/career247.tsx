@@ -100,6 +100,9 @@ function Career247Page() {
         eyebrow="Career-Focused Learning Partner"
         title="Career247 Career-Focused Learning Partner"
         subtitle="Upgrade your skills and build your career with Career247 through Pravis Learning."
+        ctaLabel="Enquire Now"
+        logoName="Career247"
+        logoTagline="Career-Focused Learning Partner"
       />
 
       {/* Intro + Logo placeholder + CTA */}
