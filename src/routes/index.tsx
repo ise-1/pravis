@@ -170,6 +170,54 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Trusted Partners */}
+      <section className="bg-secondary/40 py-20">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">Our Trusted Partners</div>
+            <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">Learning, training & placement partners</h2>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {[
+              {
+                name: "PrepInsta",
+                title: "PrepInsta Placement Training",
+                desc: "Pravis Learning connects students and colleges with PrepInsta for placement preparation, coding practice, aptitude training, interview preparation, and company-specific hiring preparation.",
+                cta: "Explore PrepInsta",
+                to: "/prepinsta" as const,
+              },
+              {
+                name: "Career247",
+                title: "Career247 Career-Focused Learning",
+                desc: "Pravis Learning connects learners with Career247 for digital marketing, data analytics, business analytics, certification courses, online degree programs, and job-oriented skill development.",
+                cta: "Explore Career247",
+                to: "/career247" as const,
+              },
+            ].map((p) => (
+              <div
+                key={p.name}
+                className="flex flex-col rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold"
+              >
+                <div
+                  className="mb-5 flex h-20 w-40 items-center justify-center rounded-lg border-2 border-dashed border-gold bg-background font-serif text-xl font-bold text-primary"
+                  aria-label={`${p.name} logo placeholder`}
+                >
+                  {p.name}
+                </div>
+                <h3 className="font-serif text-xl font-semibold text-foreground">{p.title}</h3>
+                <p className="mt-3 flex-1 text-sm text-muted-foreground">{p.desc}</p>
+                <Link
+                  to={p.to}
+                  className="mt-6 inline-flex w-fit items-center gap-1 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105"
+                >
+                  {p.cta} <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Testimonials />
 
       <CTASection
