@@ -183,7 +183,7 @@ function HomePage() {
                 name: "PrepInsta",
                 title: "PrepInsta Placement Training",
                 desc: "Pravis Learning connects students and colleges with PrepInsta for placement preparation, coding practice, aptitude training, interview preparation, and company-specific hiring preparation.",
-                cta: "Explore PrepInsta",
+                cta: "View Details",
                 to: "/prepinsta" as const,
               },
               {
