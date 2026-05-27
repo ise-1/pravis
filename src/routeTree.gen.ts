@@ -11,11 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TalentPartnerRouteImport } from './routes/talent-partner'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as PrepinstaRouteImport } from './routes/prepinsta'
 import { Route as OnlineUniversityRouteImport } from './routes/online-university'
 import { Route as InsuranceRouteImport } from './routes/insurance'
 import { Route as GtecFranchiseRouteImport } from './routes/gtec-franchise'
 import { Route as GlobalCampusRouteImport } from './routes/global-campus'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as Career247RouteImport } from './routes/career247'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -27,6 +29,11 @@ const TalentPartnerRoute = TalentPartnerRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrepinstaRoute = PrepinstaRouteImport.update({
+  id: '/prepinsta',
+  path: '/prepinsta',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OnlineUniversityRoute = OnlineUniversityRouteImport.update({
@@ -54,6 +61,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Career247Route = Career247RouteImport.update({
+  id: '/career247',
+  path: '/career247',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -68,22 +80,26 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/career247': typeof Career247Route
   '/contact': typeof ContactRoute
   '/global-campus': typeof GlobalCampusRoute
   '/gtec-franchise': typeof GtecFranchiseRoute
   '/insurance': typeof InsuranceRoute
   '/online-university': typeof OnlineUniversityRoute
+  '/prepinsta': typeof PrepinstaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/talent-partner': typeof TalentPartnerRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/career247': typeof Career247Route
   '/contact': typeof ContactRoute
   '/global-campus': typeof GlobalCampusRoute
   '/gtec-franchise': typeof GtecFranchiseRoute
   '/insurance': typeof InsuranceRoute
   '/online-university': typeof OnlineUniversityRoute
+  '/prepinsta': typeof PrepinstaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/talent-partner': typeof TalentPartnerRoute
 }
@@ -91,11 +107,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/career247': typeof Career247Route
   '/contact': typeof ContactRoute
   '/global-campus': typeof GlobalCampusRoute
   '/gtec-franchise': typeof GtecFranchiseRoute
   '/insurance': typeof InsuranceRoute
   '/online-university': typeof OnlineUniversityRoute
+  '/prepinsta': typeof PrepinstaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/talent-partner': typeof TalentPartnerRoute
 }
@@ -104,33 +122,39 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/career247'
     | '/contact'
     | '/global-campus'
     | '/gtec-franchise'
     | '/insurance'
     | '/online-university'
+    | '/prepinsta'
     | '/sitemap.xml'
     | '/talent-partner'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/career247'
     | '/contact'
     | '/global-campus'
     | '/gtec-franchise'
     | '/insurance'
     | '/online-university'
+    | '/prepinsta'
     | '/sitemap.xml'
     | '/talent-partner'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/career247'
     | '/contact'
     | '/global-campus'
     | '/gtec-franchise'
     | '/insurance'
     | '/online-university'
+    | '/prepinsta'
     | '/sitemap.xml'
     | '/talent-partner'
   fileRoutesById: FileRoutesById
@@ -138,11 +162,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  Career247Route: typeof Career247Route
   ContactRoute: typeof ContactRoute
   GlobalCampusRoute: typeof GlobalCampusRoute
   GtecFranchiseRoute: typeof GtecFranchiseRoute
   InsuranceRoute: typeof InsuranceRoute
   OnlineUniversityRoute: typeof OnlineUniversityRoute
+  PrepinstaRoute: typeof PrepinstaRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TalentPartnerRoute: typeof TalentPartnerRoute
 }
@@ -161,6 +187,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prepinsta': {
+      id: '/prepinsta'
+      path: '/prepinsta'
+      fullPath: '/prepinsta'
+      preLoaderRoute: typeof PrepinstaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/online-university': {
@@ -198,6 +231,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/career247': {
+      id: '/career247'
+      path: '/career247'
+      fullPath: '/career247'
+      preLoaderRoute: typeof Career247RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -218,11 +258,13 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  Career247Route: Career247Route,
   ContactRoute: ContactRoute,
   GlobalCampusRoute: GlobalCampusRoute,
   GtecFranchiseRoute: GtecFranchiseRoute,
   InsuranceRoute: InsuranceRoute,
   OnlineUniversityRoute: OnlineUniversityRoute,
+  PrepinstaRoute: PrepinstaRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TalentPartnerRoute: TalentPartnerRoute,
 }
