@@ -55,7 +55,7 @@ export function Header() {
         </button>
       </div>
       {open && (
-        <nav className="border-t border-border bg-background lg:hidden">
+        <nav className="border-t border-border bg-background xl:hidden">
           <div className="flex flex-col gap-1 px-4 py-3">
             {nav.map((n) => (
               <Link
