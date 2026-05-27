@@ -128,6 +128,8 @@ function Page() {
                     <option>Online Degree Admission</option>
                     <option>G-TEC Franchise</option>
                     <option>Global Campus Partner</option>
+                    <option>PrepInsta Placement Training</option>
+                    <option>Career247 Career-Focused Learning</option>
                     <option>Talent Partner Services</option>
                     <option>Insurance Services</option>
                     <option>Other Enquiry</option>
