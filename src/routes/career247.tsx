@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import career247Logo from "@/assets/logos/career247.png";
 import { PageHero } from "@/components/PageHero";
 import {
   CheckCircle2,
@@ -103,6 +104,7 @@ function Career247Page() {
         ctaLabel="Enquire Now"
         logoName="Career247"
         logoTagline="Career-Focused Learning Partner"
+        logoSrc={career247Logo}
       />
 
       {/* Intro + Logo placeholder + CTA */}
