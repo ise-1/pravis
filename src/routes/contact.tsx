@@ -131,7 +131,7 @@ function Page() {
               <div className="mt-6 rounded-lg border border-gold/40 bg-gold/10 p-6 text-center">
                 <CheckCircle2 className="mx-auto h-10 w-10 text-gold" />
                 <h3 className="mt-3 font-serif text-lg font-bold">Thank you!</h3>
-                <p className="mt-2 text-sm text-muted-foreground">Thank you for contacting Pravis Learning. Our team has received your enquiry and will get in touch with you shortly.</p>
+                <p className="mt-2 text-sm text-muted-foreground">Thank you for your enquiry. Our team will contact you shortly.</p>
                 <button onClick={() => setSubmitted(false)} className="mt-4 text-sm font-semibold text-maroon hover:underline">
                   Submit another enquiry
                 </button>
