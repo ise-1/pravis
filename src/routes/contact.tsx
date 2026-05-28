@@ -3,8 +3,12 @@ import { PageHero } from "@/components/PageHero";
 import { useState } from "react";
 import { Mail, MapPin, Phone, Clock, CheckCircle2, Loader2 } from "lucide-react";
 import { z } from "zod";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+
+// 1. Sign up at https://web3forms.com with info@pravislearning.com
+// 2. Verify your email and copy the access key
+// 3. Paste it below (it is a public key, safe to keep in code)
+const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -34,7 +38,6 @@ const enquirySchema = z.object({
   email: z.string().trim().email("Enter a valid email").max(255),
   city: z.string().trim().max(100).optional().or(z.literal("")),
   interested_service: z.string().min(1, "Please select a service").max(100),
-  details: z.string().trim().max(500).optional().or(z.literal("")),
   message: z.string().trim().max(2000).optional().or(z.literal("")),
 });
 
@@ -52,7 +55,6 @@ function Page() {
       email: String(fd.get("email") ?? ""),
       city: String(fd.get("city") ?? ""),
       interested_service: String(fd.get("interested_service") ?? ""),
-      details: String(fd.get("details") ?? ""),
       message: String(fd.get("message") ?? ""),
     };
 
@@ -62,26 +64,45 @@ function Page() {
       return;
     }
 
-    setSubmitting(true);
-    const { error } = await supabase.from("enquiries").insert({
-      name: parsed.data.name,
-      mobile: parsed.data.mobile,
-      email: parsed.data.email,
-      city: parsed.data.city || null,
-      interested_service: parsed.data.interested_service,
-      details: parsed.data.details || null,
-      message: parsed.data.message || null,
-    });
-    setSubmitting(false);
-
-    if (error) {
-      console.error("Enquiry submission failed", error);
-      toast.error("Something went wrong. Please try again or call us directly.");
+    if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === "YOUR_WEB3FORMS_ACCESS_KEY") {
+      toast.error("Email service is not configured yet. Please contact us directly.");
       return;
     }
-    toast.success("Enquiry received — our team will be in touch shortly.");
-    setSubmitted(true);
-    form.reset();
+
+    setSubmitting(true);
+    try {
+      const submittedAt = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata", dateStyle: "full", timeStyle: "short" });
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New Enquiry from ${parsed.data.name} — ${parsed.data.interested_service}`,
+          from_name: "Pravis Learning Website",
+          to: "info@pravislearning.com",
+          replyto: parsed.data.email,
+          "Full Name": parsed.data.name,
+          "Mobile Number": parsed.data.mobile,
+          "Email ID": parsed.data.email,
+          City: parsed.data.city || "—",
+          "Interested Service": parsed.data.interested_service,
+          Message: parsed.data.message || "—",
+          "Submitted Date and Time": submittedAt,
+        }),
+      });
+      const json = await res.json();
+      if (!res.ok || !json.success) {
+        throw new Error(json.message || "Submission failed");
+      }
+      toast.success("Thank you for your enquiry. Our team will contact you shortly.");
+      setSubmitted(true);
+      form.reset();
+    } catch (err) {
+      console.error("Enquiry submission failed", err);
+      toast.error("Something went wrong. Please try again or call us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
