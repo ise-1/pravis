@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/pravis-logo.jpeg";
+import logo from "@/assets/pravis-logo.webp";
 
 export function Footer() {
   return (

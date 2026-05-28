@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import talentPartnerLogo from "@/assets/logos/talent-partner.png";
+import talentPartnerLogo from "@/assets/logos/talent-partner.webp";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { CheckCircle2 } from "lucide-react";

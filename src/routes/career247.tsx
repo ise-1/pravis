@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import career247Logo from "@/assets/logos/career247.png";
+import career247Logo from "@/assets/logos/career247.webp";
 import { PageHero } from "@/components/PageHero";
 import {
   CheckCircle2,

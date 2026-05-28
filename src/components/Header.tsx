@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/pravis-logo.jpeg";
+import logo from "@/assets/pravis-logo.webp";
 
 const nav = [
   { to: "/", label: "Home" },

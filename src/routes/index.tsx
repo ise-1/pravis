@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { GraduationCap, Building2, Globe2, Users, Shield, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
-import heroImg from "@/assets/hero.jpg";
-import prepinstaLogo from "@/assets/logos/prepinsta.png";
-import career247Logo from "@/assets/logos/career247.png";
+import heroImg from "@/assets/hero.webp";
+import prepinstaLogo from "@/assets/logos/prepinsta.webp";
+import career247Logo from "@/assets/logos/career247.webp";
 import { CTASection } from "@/components/CTASection";
 import { Testimonials } from "@/components/Testimonials";
 
