@@ -8,7 +8,7 @@ import { toast } from "sonner";
 // 1. Sign up at https://web3forms.com with info@pravislearning.com
 // 2. Verify your email and copy the access key
 // 3. Paste it below (it is a public key, safe to keep in code)
-const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+const WEB3FORMS_ACCESS_KEY = "6f86b587-ec78-407e-8d0f-cbe3e77c0e84";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
