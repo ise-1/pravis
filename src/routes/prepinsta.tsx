@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import prepinstaLogo from "@/assets/logos/prepinsta.png";
+import prepinstaLogo from "@/assets/logos/prepinsta.webp";
 import { PageHero } from "@/components/PageHero";
 import {
   CheckCircle2,

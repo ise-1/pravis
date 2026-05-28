@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import gtecLogo from "@/assets/logos/gtec.png";
+import gtecLogo from "@/assets/logos/gtec.webp";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { CheckCircle2 } from "lucide-react";

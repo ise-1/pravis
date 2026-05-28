@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { GraduationCap, Building2, Globe2, Users, Shield, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
-import heroImg from "@/assets/hero.jpg";
-import prepinstaLogo from "@/assets/logos/prepinsta.png";
-import career247Logo from "@/assets/logos/career247.png";
+import heroImg from "@/assets/hero.webp";
+import prepinstaLogo from "@/assets/logos/prepinsta.webp";
+import career247Logo from "@/assets/logos/career247.webp";
 import { CTASection } from "@/components/CTASection";
 import { Testimonials } from "@/components/Testimonials";
 
@@ -13,6 +13,9 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Pravis Learning offers online UG and PG degree admission guidance, career support, franchise opportunities, and education services in Chennai. Get expert counselling today." },
       { property: "og:title", content: "Pravis Learning Chennai | Online Degree Admission & Career Guidance" },
       { property: "og:description", content: "Pravis Learning offers online degree admission guidance, franchise opportunities, career support, and education services in Chennai." },
+    ],
+    links: [
+      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" } as any,
     ],
   }),
   component: HomePage,
@@ -82,6 +85,10 @@ function HomePage() {
               alt="Students and professionals with Pravis Learning"
               width={1600}
               height={1100}
+              loading="eager"
+              decoding="async"
+              // @ts-expect-error - fetchpriority is valid HTML attribute
+              fetchpriority="high"
               className="relative w-full rounded-2xl object-cover shadow-[var(--shadow-elegant)]"
             />
           </div>

@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/pravis-logo.jpeg";
+import logo from "@/assets/pravis-logo.webp";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -22,7 +22,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Pravis Learning logo" className="h-11 w-11 object-contain" width={44} height={44} />
+          <img src={logo} alt="Pravis Learning logo" decoding="async" className="h-11 w-11 object-contain" width={44} height={44} />
           <div className="leading-tight">
             <div className="font-serif text-lg font-bold text-primary">PRAVIS</div>
             <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Learning</div>

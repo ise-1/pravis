@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import globalCampusLogo from "@/assets/logos/global-campus.png";
+import globalCampusLogo from "@/assets/logos/global-campus.webp";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { CheckCircle2 } from "lucide-react";

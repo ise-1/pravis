@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/pravis-logo.jpeg";
+import logo from "@/assets/pravis-logo.webp";
 
 export function Footer() {
   return (
@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
-            <img src={logo} alt="Pravis Learning" className="h-12 w-12 rounded bg-white object-contain p-1" width={48} height={48} />
+            <img src={logo} alt="Pravis Learning" loading="lazy" decoding="async" className="h-12 w-12 rounded bg-white object-contain p-1" width={48} height={48} />
             <div>
               <div className="font-serif text-xl font-bold">PRAVIS</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-gold">Education · Protection · Prosperity</div>

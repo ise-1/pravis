@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import insuranceLogo from "@/assets/logos/insurance4u.png";
+import insuranceLogo from "@/assets/logos/insurance4u.webp";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { CheckCircle2 } from "lucide-react";
