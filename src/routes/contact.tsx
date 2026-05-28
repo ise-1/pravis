@@ -64,7 +64,7 @@ function Page() {
       return;
     }
 
-    if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === "YOUR_WEB3FORMS_ACCESS_KEY") {
+    if (!WEB3FORMS_ACCESS_KEY) {
       toast.error("Email service is not configured yet. Please contact us directly.");
       return;
     }
