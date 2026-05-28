@@ -156,7 +156,7 @@ function Page() {
                     <option>Other Enquiry</option>
                   </select>
                 </div>
-                <Field label="Preferred Course / Service Details" name="details" />
+                
                 <div>
                   <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Message</label>
                   <textarea name="message" rows={4} className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:border-primary focus:outline-none" />
