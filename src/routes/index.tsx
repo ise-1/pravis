@@ -82,6 +82,10 @@ function HomePage() {
               alt="Students and professionals with Pravis Learning"
               width={1600}
               height={1100}
+              loading="eager"
+              decoding="async"
+              // @ts-expect-error - fetchpriority is valid HTML attribute
+              fetchpriority="high"
               className="relative w-full rounded-2xl object-cover shadow-[var(--shadow-elegant)]"
             />
           </div>
