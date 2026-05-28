@@ -14,6 +14,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Pravis Learning Chennai | Online Degree Admission & Career Guidance" },
       { property: "og:description", content: "Pravis Learning offers online degree admission guidance, franchise opportunities, career support, and education services in Chennai." },
     ],
+    links: [
+      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" } as any,
+    ],
   }),
   component: HomePage,
 });
