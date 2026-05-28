@@ -77,7 +77,7 @@ function Page() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `New Enquiry from ${parsed.data.name} — ${parsed.data.interested_service}`,
+          subject: "New Enquiry from Pravis Learning Website",
           from_name: "Pravis Learning Website",
           to: "info@pravislearning.com",
           replyto: parsed.data.email,
