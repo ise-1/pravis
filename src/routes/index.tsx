@@ -118,7 +118,7 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="mx-auto max-w-2xl text-center">
             <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">Our Services</div>
-            <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">Five paths. One trusted partner.</h2>
+            <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">One trusted partner for every step of your journey.</h2>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
