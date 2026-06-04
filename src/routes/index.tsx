@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Pravis Learning offers online degree admission guidance, franchise opportunities, career support, and education services in Chennai." },
     ],
     links: [
-      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" } as any,
+      { rel: "preload", as: "image", href: heroImg, fetchPriority: "high" } as any,
     ],
   }),
   component: HomePage,
@@ -93,8 +93,7 @@ function HomePage() {
               height={1100}
               loading="eager"
               decoding="async"
-              // @ts-expect-error - fetchpriority is valid HTML attribute
-              fetchpriority="high"
+              fetchPriority="high"
               className="relative w-full rounded-2xl object-cover shadow-[var(--shadow-elegant)]"
             />
           </div>
