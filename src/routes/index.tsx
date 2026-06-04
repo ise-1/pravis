@@ -1,8 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { GraduationCap, Building2, Globe2, Users, Shield, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import { GraduationCap, Building2, Globe2, Users, Shield, ArrowRight, CheckCircle2, Sparkles, BookOpen, Briefcase } from "lucide-react";
 import heroImg from "@/assets/hero.webp";
+import gtecLogo from "@/assets/logos/gtec.webp";
+import globalCampusLogo from "@/assets/logos/global-campus.webp";
 import prepinstaLogo from "@/assets/logos/prepinsta.webp";
 import career247Logo from "@/assets/logos/career247.webp";
+import talentPartnerLogo from "@/assets/logos/talent-partner.webp";
+import insuranceLogo from "@/assets/logos/insurance4u.webp";
 import { CTASection } from "@/components/CTASection";
 import { Testimonials } from "@/components/Testimonials";
 
@@ -22,11 +26,13 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: GraduationCap, title: "Online University Admission", desc: "Recognized UG & PG online degrees with end-to-end admission guidance.", to: "/online-university" },
-  { icon: Building2, title: "G-TEC Franchise", desc: "Start your own IT & skill development training centre with a trusted brand.", to: "/gtec-franchise" },
-  { icon: Globe2, title: "Global Campus Partner", desc: "Build a study abroad counselling business with strong university tie-ups.", to: "/global-campus" },
-  { icon: Users, title: "Talent Partner Services", desc: "Connect companies with skilled, job-ready candidates across industries.", to: "/talent-partner" },
-  { icon: Shield, title: "Insurance Advisory", desc: "Life, health and general insurance guidance for individuals and families.", to: "/insurance" },
+  { icon: GraduationCap, title: "Online Degree Admission", desc: "Recognized UG & PG online degrees with end-to-end admission guidance.", to: "/online-university" },
+  { icon: Building2, title: "Education Franchise", desc: "Start your own IT & skill development training centre with a trusted brand.", to: "/gtec-franchise" },
+  { icon: Globe2, title: "Study Abroad Partner", desc: "Build a study abroad counselling business with strong university tie-ups.", to: "/global-campus" },
+  { icon: BookOpen, title: "Online Training Program for University / College", desc: "Placement preparation, coding practice, aptitude and interview training for students and colleges.", to: "/prepinsta" },
+  { icon: Briefcase, title: "Career-Focused Learning", desc: "Digital marketing, data analytics, certifications and job-oriented skill development.", to: "/career247" },
+  { icon: Users, title: "Talent Support", desc: "Connect companies with skilled, job-ready candidates across industries.", to: "/talent-partner" },
+  { icon: Shield, title: "Insurance Guidance", desc: "Life, health and general insurance guidance for individuals and families.", to: "/insurance" },
 ];
 
 const programs = ["Online MBA","Online MCA","Online BBA","Online BCA","Online B.Com","Online M.Com","Digital Marketing","Data Analytics","IT Skill Courses","Study Abroad","Franchise Business"];
@@ -112,7 +118,7 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="mx-auto max-w-2xl text-center">
             <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">Our Services</div>
-            <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">Five paths. One trusted partner.</h2>
+            <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">One trusted partner for every step of your journey.</h2>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
@@ -180,56 +186,8 @@ function HomePage() {
       </section>
 
       {/* Trusted Partners */}
-      <section className="bg-secondary/40 py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="mx-auto max-w-2xl text-center">
-            <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">Our Trusted Partners</div>
-            <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">Learning, training & placement partners</h2>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {[
-              {
-                name: "PrepInsta",
-                logo: prepinstaLogo,
-                title: "PrepInsta Placement Training",
-                desc: "Pravis Learning connects students and colleges with PrepInsta for placement preparation, coding practice, aptitude training, interview preparation, and company-specific hiring preparation.",
-                cta: "View Details",
-                to: "/prepinsta" as const,
-              },
-              {
-                name: "Career247",
-                logo: career247Logo,
-                title: "Career247 Career-Focused Learning",
-                desc: "Pravis Learning connects learners with Career247 for digital marketing, data analytics, business analytics, certification courses, online degree programs, and job-oriented skill development.",
-                cta: "View Details",
-                to: "/career247" as const,
-              },
-            ].map((p) => (
-              <div
-                key={p.name}
-                className="flex flex-col rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold"
-              >
-                <div className="mb-5 flex h-20 w-full max-w-[220px] items-center justify-start">
-                  <img
-                    src={p.logo}
-                    alt={`${p.name} logo`}
-                    loading="lazy"
-                    className="h-full w-auto max-w-[200px] object-contain"
-                  />
-                </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground">{p.title}</h3>
-                <p className="mt-3 flex-1 text-sm text-muted-foreground">{p.desc}</p>
-                <Link
-                  to={p.to}
-                  className="mt-6 inline-flex w-fit items-center gap-1 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105"
-                >
-                  {p.cta} <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TrustedPartners />
+
 
       <Testimonials />
 
@@ -241,3 +199,52 @@ function HomePage() {
     </>
   );
 }
+
+const partners = [
+  { name: "G-TEC", logo: gtecLogo, to: "/gtec-franchise" as const },
+  { name: "Global Campus", logo: globalCampusLogo, to: "/global-campus" as const },
+  { name: "PrepInsta", logo: prepinstaLogo, to: "/prepinsta" as const },
+  { name: "Career247", logo: career247Logo, to: "/career247" as const },
+  { name: "Talent Partner", logo: talentPartnerLogo, to: "/talent-partner" as const },
+  { name: "Insurance4U", logo: insuranceLogo, to: "/insurance" as const },
+];
+
+export function TrustedPartners() {
+  return (
+    <section className="bg-secondary/40 py-20">
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">Our Trusted Partners</div>
+          <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">Backed by trusted brands</h2>
+          <p className="mx-auto mt-4 text-muted-foreground">
+            Pravis Learning works with trusted education, training, career, study abroad, and professional service partners to provide better opportunities for students, colleges, professionals, and entrepreneurs.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {partners.map((p) => (
+            <Link
+              key={p.name}
+              to={p.to}
+              className="group flex flex-col items-center rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold"
+            >
+              <div className="flex h-24 w-full items-center justify-center">
+                <img
+                  src={p.logo}
+                  alt={`${p.name} logo`}
+                  loading="lazy"
+                  decoding="async"
+                  className="max-h-20 w-auto max-w-[180px] object-contain"
+                />
+              </div>
+              <div className="mt-4 font-serif text-lg font-semibold text-primary">{p.name}</div>
+              <span className="mt-4 inline-flex items-center gap-1 rounded-md bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-transform group-hover:scale-105">
+                View Details <ArrowRight className="h-3.5 w-3.5" />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+

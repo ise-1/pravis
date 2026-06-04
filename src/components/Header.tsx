@@ -9,8 +9,6 @@ const nav = [
   { to: "/online-university", label: "Online University" },
   { to: "/gtec-franchise", label: "G-TEC Expansion Partner" },
   { to: "/global-campus", label: "Global Campus" },
-  { to: "/prepinsta", label: "PrepInsta" },
-  { to: "/career247", label: "Career247" },
   { to: "/talent-partner", label: "Talent Partner" },
   { to: "/insurance", label: "Insurance" },
   { to: "/contact", label: "Contact" },
