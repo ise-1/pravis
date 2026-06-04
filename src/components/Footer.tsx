@@ -33,11 +33,13 @@ export function Footer() {
         <div>
           <h4 className="mb-3 font-serif text-base text-gold">Services</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/85">
-            <li>Online Degree Admission</li>
-            <li>Education Franchise</li>
-            <li>Study Abroad Partner</li>
-            <li>Talent Support</li>
-            <li>Insurance Guidance</li>
+            <li><Link to="/online-university" className="hover:text-gold">Online Degree Admission</Link></li>
+            <li><Link to="/gtec-franchise" className="hover:text-gold">Education Franchise</Link></li>
+            <li><Link to="/global-campus" className="hover:text-gold">Study Abroad Partner</Link></li>
+            <li><Link to="/prepinsta" className="hover:text-gold">Online Training Program for University / College</Link></li>
+            <li><Link to="/career247" className="hover:text-gold">Career-Focused Learning</Link></li>
+            <li><Link to="/talent-partner" className="hover:text-gold">Talent Support</Link></li>
+            <li><Link to="/insurance" className="hover:text-gold">Insurance Guidance</Link></li>
           </ul>
         </div>
         <div>
