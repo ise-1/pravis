@@ -199,3 +199,52 @@ function HomePage() {
     </>
   );
 }
+
+const partners = [
+  { name: "G-TEC", logo: gtecLogo, to: "/gtec-franchise" as const },
+  { name: "Global Campus", logo: globalCampusLogo, to: "/global-campus" as const },
+  { name: "PrepInsta", logo: prepinstaLogo, to: "/prepinsta" as const },
+  { name: "Career247", logo: career247Logo, to: "/career247" as const },
+  { name: "Talent Partner", logo: talentPartnerLogo, to: "/talent-partner" as const },
+  { name: "Insurance4U", logo: insuranceLogo, to: "/insurance" as const },
+];
+
+export function TrustedPartners() {
+  return (
+    <section className="bg-secondary/40 py-20">
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">Our Trusted Partners</div>
+          <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">Backed by trusted brands</h2>
+          <p className="mx-auto mt-4 text-muted-foreground">
+            Pravis Learning works with trusted education, training, career, study abroad, and professional service partners to provide better opportunities for students, colleges, professionals, and entrepreneurs.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {partners.map((p) => (
+            <Link
+              key={p.name}
+              to={p.to}
+              className="group flex flex-col items-center rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold"
+            >
+              <div className="flex h-24 w-full items-center justify-center">
+                <img
+                  src={p.logo}
+                  alt={`${p.name} logo`}
+                  loading="lazy"
+                  decoding="async"
+                  className="max-h-20 w-auto max-w-[180px] object-contain"
+                />
+              </div>
+              <div className="mt-4 font-serif text-lg font-semibold text-primary">{p.name}</div>
+              <span className="mt-4 inline-flex items-center gap-1 rounded-md bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-transform group-hover:scale-105">
+                View Details <ArrowRight className="h-3.5 w-3.5" />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
