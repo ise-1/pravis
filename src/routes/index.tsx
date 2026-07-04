@@ -117,19 +117,19 @@ function HomePage() {
             <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">Our Services</div>
             <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">One trusted partner for every step of your journey.</h2>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 flex flex-wrap justify-center gap-6">
             {services.map((s) => (
               <Link
                 key={s.title}
                 to={s.to}
-                className="group relative overflow-hidden rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold"
+                className="group relative flex w-full flex-col overflow-hidden rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
                 <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                   <s.icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground">{s.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
-                <div className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-maroon">
+                <div className="mt-auto pt-5 inline-flex items-center gap-1 text-sm font-semibold text-maroon">
                   Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </Link>
