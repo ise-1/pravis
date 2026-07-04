@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-// TrustedPartners uses plain <div> cards — no navigation
 import { Building2, Globe2, Users, ArrowRight, CheckCircle2, Sparkles, BookOpen, Briefcase } from "lucide-react";
 import heroImg from "@/assets/hero.webp";
 import gtecLogo from "@/assets/logos/gtec.webp";
