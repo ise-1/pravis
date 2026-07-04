@@ -198,11 +198,11 @@ function HomePage() {
 }
 
 const partners = [
-  { name: "G-TEC", logo: gtecLogo, to: "/gtec-franchise" as const },
-  { name: "Global Campus", logo: globalCampusLogo, to: "/global-campus" as const },
-  { name: "PrepInsta", logo: prepinstaLogo, to: "/prepinsta" as const },
-  { name: "Career247", logo: career247Logo, to: "/career247" as const },
-  { name: "Talent Partner", logo: talentPartnerLogo, to: "/talent-partner" as const },
+  { name: "G-TEC", logo: gtecLogo },
+  { name: "Global Campus", logo: globalCampusLogo },
+  { name: "PrepInsta", logo: prepinstaLogo },
+  { name: "Career247", logo: career247Logo },
+  { name: "Talent Partner", logo: talentPartnerLogo },
 ];
 
 // Per-logo visual scaling so all logos appear balanced in weight.
@@ -227,10 +227,9 @@ export function TrustedPartners() {
         </div>
         <div className="mt-12 flex flex-wrap justify-center gap-6">
           {partners.map((p) => (
-            <Link
+            <div
               key={p.name}
-              to={p.to}
-              className="group flex w-full cursor-pointer flex-col items-center justify-center rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold hover:shadow-lg sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+              className="group flex w-full flex-col items-center justify-center rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold hover:shadow-lg sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
             >
               <div className="flex h-[100px] w-full max-w-[220px] items-center justify-center px-4">
                 <img
@@ -242,7 +241,7 @@ export function TrustedPartners() {
                 />
               </div>
               <div className="mt-3 font-serif text-lg font-semibold text-primary">{p.name}</div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
