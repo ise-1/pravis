@@ -31,7 +31,6 @@ export function Footer() {
         <div>
           <h4 className="mb-3 font-serif text-base text-gold">Services</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/85">
-            <li><Link to="/online-university" className="hover:text-gold">Online Degree Admission</Link></li>
             <li><Link to="/gtec-franchise" className="hover:text-gold">Education Franchise</Link></li>
             <li><Link to="/global-campus" className="hover:text-gold">Study Abroad Partner</Link></li>
             <li><Link to="/prepinsta" className="hover:text-gold">Online Training Program for University / College</Link></li>
