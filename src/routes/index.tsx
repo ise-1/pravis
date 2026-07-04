@@ -198,11 +198,11 @@ function HomePage() {
 }
 
 const partners = [
-  { name: "G-TEC", logo: gtecLogo, to: "/gtec-franchise" as const },
-  { name: "Global Campus", logo: globalCampusLogo, to: "/global-campus" as const },
-  { name: "PrepInsta", logo: prepinstaLogo, to: "/prepinsta" as const },
-  { name: "Career247", logo: career247Logo, to: "/career247" as const },
-  { name: "Talent Partner", logo: talentPartnerLogo, to: "/talent-partner" as const },
+  { name: "G-TEC", logo: gtecLogo },
+  { name: "Global Campus", logo: globalCampusLogo },
+  { name: "PrepInsta", logo: prepinstaLogo },
+  { name: "Career247", logo: career247Logo },
+  { name: "Talent Partner", logo: talentPartnerLogo },
 ];
 
 // Per-logo visual scaling so all logos appear balanced in weight.
