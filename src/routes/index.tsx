@@ -241,7 +241,7 @@ export function TrustedPartners() {
                 />
               </div>
               <div className="mt-3 font-serif text-lg font-semibold text-primary">{p.name}</div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
