@@ -25,7 +25,6 @@ export function Footer() {
             <li><Link to="/gtec-franchise" className="hover:text-gold">G-TEC Franchise</Link></li>
             <li><Link to="/global-campus" className="hover:text-gold">Global Campus</Link></li>
             <li><Link to="/talent-partner" className="hover:text-gold">Talent Partner</Link></li>
-            <li><Link to="/insurance" className="hover:text-gold">Insurance Services</Link></li>
             <li><Link to="/contact" className="hover:text-gold">Contact Us</Link></li>
           </ul>
         </div>
