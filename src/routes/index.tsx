@@ -26,13 +26,11 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: GraduationCap, title: "Online Degree Admission", desc: "Recognized UG & PG online degrees with end-to-end admission guidance.", to: "/online-university" },
   { icon: Building2, title: "Education Franchise", desc: "Start your own IT & skill development training centre with a trusted brand.", to: "/gtec-franchise" },
   { icon: Globe2, title: "Study Abroad Partner", desc: "Build a study abroad counselling business with strong university tie-ups.", to: "/global-campus" },
   { icon: BookOpen, title: "Online Training Program for University / College", desc: "Placement preparation, coding practice, aptitude and interview training for students and colleges.", to: "/prepinsta" },
   { icon: Briefcase, title: "Career-Focused Learning", desc: "Digital marketing, data analytics, certifications and job-oriented skill development.", to: "/career247" },
   { icon: Users, title: "Talent Support", desc: "Connect companies with skilled, job-ready candidates across industries.", to: "/talent-partner" },
-  { icon: Shield, title: "Insurance Guidance", desc: "Life, health and general insurance guidance for individuals and families.", to: "/insurance" },
 ];
 
 const programs = ["Online MBA","Online MCA","Online BBA","Online BCA","Online B.Com","Online M.Com","Digital Marketing","Data Analytics","IT Skill Courses","Study Abroad","Franchise Business"];
