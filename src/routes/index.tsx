@@ -203,8 +203,16 @@ const partners = [
   { name: "PrepInsta", logo: prepinstaLogo, to: "/prepinsta" as const },
   { name: "Career247", logo: career247Logo, to: "/career247" as const },
   { name: "Talent Partner", logo: talentPartnerLogo, to: "/talent-partner" as const },
-  { name: "Insurance4U", logo: insuranceLogo, to: "/insurance" as const },
 ];
+
+// Per-logo visual scaling so all logos appear balanced in weight.
+const logoScale: Record<string, string> = {
+  "G-TEC": "max-h-[80px] scale-110",
+  "Global Campus": "max-h-[64px]",
+  "PrepInsta": "max-h-[60px]",
+  "Career247": "max-h-[72px]",
+  "Talent Partner": "max-h-[80px] scale-110",
+};
 
 export function TrustedPartners() {
   return (
@@ -217,26 +225,23 @@ export function TrustedPartners() {
             Pravis Learning works with trusted education, training, career, study abroad, and professional service partners to provide better opportunities for students, colleges, professionals, and entrepreneurs.
           </p>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 flex flex-wrap justify-center gap-6">
           {partners.map((p) => (
             <Link
               key={p.name}
               to={p.to}
-              className="group flex flex-col items-center rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold"
+              className="group flex w-full cursor-pointer flex-col items-center justify-center rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold hover:shadow-lg sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
             >
-              <div className="flex h-24 w-full items-center justify-center">
+              <div className="flex h-[100px] w-full max-w-[220px] items-center justify-center px-4">
                 <img
                   src={p.logo}
                   alt={`${p.name} logo`}
                   loading="lazy"
                   decoding="async"
-                  className="max-h-20 w-auto max-w-[180px] object-contain"
+                  className={`h-full w-full object-contain object-center ${logoScale[p.name] ?? "max-h-[80px]"}`}
                 />
               </div>
-              <div className="mt-4 font-serif text-lg font-semibold text-primary">{p.name}</div>
-              <span className="mt-4 inline-flex items-center gap-1 rounded-md bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-transform group-hover:scale-105">
-                View Details <ArrowRight className="h-3.5 w-3.5" />
-              </span>
+              <div className="mt-3 font-serif text-lg font-semibold text-primary">{p.name}</div>
             </Link>
           ))}
         </div>
