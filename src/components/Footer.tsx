@@ -22,7 +22,6 @@ export function Footer() {
           <ul className="space-y-2 text-sm text-primary-foreground/85">
             <li><Link to="/" className="hover:text-gold">Home</Link></li>
             <li><Link to="/about" className="hover:text-gold">About Us</Link></li>
-            <li><Link to="/online-university" className="hover:text-gold">Online University</Link></li>
             <li><Link to="/gtec-franchise" className="hover:text-gold">G-TEC Franchise</Link></li>
             <li><Link to="/global-campus" className="hover:text-gold">Global Campus</Link></li>
             <li><Link to="/talent-partner" className="hover:text-gold">Talent Partner</Link></li>
