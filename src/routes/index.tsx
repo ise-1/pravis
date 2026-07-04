@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { GraduationCap, Building2, Globe2, Users, Shield, ArrowRight, CheckCircle2, Sparkles, BookOpen, Briefcase } from "lucide-react";
+import { Building2, Globe2, Users, ArrowRight, CheckCircle2, Sparkles, BookOpen, Briefcase } from "lucide-react";
 import heroImg from "@/assets/hero.webp";
 import gtecLogo from "@/assets/logos/gtec.webp";
 import globalCampusLogo from "@/assets/logos/global-campus.webp";
