@@ -6,7 +6,7 @@ import globalCampusLogo from "@/assets/logos/global-campus.webp";
 import prepinstaLogo from "@/assets/logos/prepinsta.webp";
 import career247Logo from "@/assets/logos/career247.webp";
 import talentPartnerLogo from "@/assets/logos/talent-partner.webp";
-import insuranceLogo from "@/assets/logos/insurance4u.webp";
+
 import { CTASection } from "@/components/CTASection";
 import { Testimonials } from "@/components/Testimonials";
 
