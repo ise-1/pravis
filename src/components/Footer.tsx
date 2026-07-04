@@ -36,7 +36,6 @@ export function Footer() {
             <li><Link to="/prepinsta" className="hover:text-gold">Online Training Program for University / College</Link></li>
             <li><Link to="/career247" className="hover:text-gold">Career-Focused Learning</Link></li>
             <li><Link to="/talent-partner" className="hover:text-gold">Talent Support</Link></li>
-            <li><Link to="/insurance" className="hover:text-gold">Insurance Guidance</Link></li>
           </ul>
         </div>
         <div>
