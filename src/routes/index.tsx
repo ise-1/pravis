@@ -227,10 +227,9 @@ export function TrustedPartners() {
         </div>
         <div className="mt-12 flex flex-wrap justify-center gap-6">
           {partners.map((p) => (
-            <Link
+            <div
               key={p.name}
-              to={p.to}
-              className="group flex w-full cursor-pointer flex-col items-center justify-center rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold hover:shadow-lg sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+              className="group flex w-full flex-col items-center justify-center rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-gold hover:shadow-lg sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
             >
               <div className="flex h-[100px] w-full max-w-[220px] items-center justify-center px-4">
                 <img
