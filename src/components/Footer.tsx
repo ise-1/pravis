@@ -10,11 +10,11 @@ export function Footer() {
             <img src={logo} alt="Pravis Learning" loading="lazy" decoding="async" className="h-12 w-12 rounded bg-white object-contain p-1" width={48} height={48} />
             <div>
               <div className="font-serif text-xl font-bold">PRAVIS</div>
-              <div className="text-[10px] uppercase tracking-[0.18em] text-gold">Education · Protection · Prosperity</div>
+              <div className="text-[10px] uppercase tracking-[0.18em] text-gold">Learning</div>
             </div>
           </div>
           <p className="mt-4 text-sm text-primary-foreground/80">
-            Trusted education and professional service provider offering online degrees, franchise support, talent solutions, study abroad partnership, and insurance advisory.
+            Trusted career guidance and professional services company helping students, professionals, businesses, and entrepreneurs through education partnerships, talent solutions, insurance advisory, and franchise opportunities.
           </p>
         </div>
         <div>
