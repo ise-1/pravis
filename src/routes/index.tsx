@@ -8,7 +8,6 @@ import career247Logo from "@/assets/logos/career247.webp";
 import talentPartnerLogo from "@/assets/logos/talent-partner.webp";
 
 import { CTASection } from "@/components/CTASection";
-import { Testimonials } from "@/components/Testimonials";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -184,9 +183,6 @@ function HomePage() {
 
       {/* Trusted Partners */}
       <TrustedPartners />
-
-
-      <Testimonials />
 
       <CTASection
         title="Need Guidance? Talk to Our Expert Team"
