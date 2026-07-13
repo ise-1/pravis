@@ -136,12 +136,12 @@ function Career247Page() {
           <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">About Career247</h2>
           <p className="mt-5 text-muted-foreground">
             Career247 is an online education platform that provides career-focused learning through certification
-            courses, online degree programs, and job-oriented programs. The platform supports learners with flexible
+            courses, professional learning programs, and job-oriented programs. The platform supports learners with flexible
             online learning, expert-led training, industry-focused curriculum, and career assistance.
           </p>
           <p className="mt-3 text-muted-foreground">
             Career247 offers programs in areas such as Digital Marketing, Data Analytics, Business Analytics, Tech
-            Certification Courses, Online Degree Programs, and Job + Certification Programs.
+            Certification Courses, Professional Learning Programs, and Job + Certification Programs.
           </p>
           <p className="mt-3 text-muted-foreground">
             Pravis Learning works with Career247 to help students and professionals explore suitable courses and choose
