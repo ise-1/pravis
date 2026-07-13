@@ -38,7 +38,7 @@ const programs = ["Career Guidance","Professional Training","Digital Marketing",
 const reasons = [
   "Trusted education and career support company",
   "Experienced counselling team",
-  "Online degree admission guidance",
+  "Career guidance and professional learning",
   "Franchise opportunity support",
   "Career and talent solutions",
   "Transparent process",
