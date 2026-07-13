@@ -14,7 +14,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Pravis Learning — Chennai" },
-      { name: "description", content: "Reach out for online degrees, franchise opportunities, study abroad, talent or insurance services. Mon–Sat 10AM–6PM, Chennai." },
+      { name: "description", content: "Reach out for career guidance, franchise opportunities, study abroad partnerships, talent solutions, or insurance services. Mon–Sat 10AM–6PM, Chennai." },
       { property: "og:title", content: "Contact Pravis Learning" },
       { property: "og:description", content: "We're here to guide you." },
     ],
