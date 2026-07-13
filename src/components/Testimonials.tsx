@@ -10,9 +10,9 @@ interface Testimonial {
 const defaultTestimonials: Testimonial[] = [
   {
     quote:
-      "Pravis Learning guided me through my Online MBA admission step by step. The counselling was honest and saved me weeks of research.",
+      "Pravis Learning helped me choose the right career path and connected me with excellent learning opportunities. Their guidance was professional and transparent.",
     name: "Priya R.",
-    role: "Online MBA Student, Chennai",
+    role: "Career Guidance Client, Chennai",
   },
   {
     quote:
