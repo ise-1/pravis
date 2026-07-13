@@ -46,7 +46,7 @@ const programs = [
   { icon: BarChart3, label: "Data Analytics" },
   { icon: LineChart, label: "Business Analytics" },
   { icon: Award, label: "Tech Certification Courses" },
-  { icon: GraduationCap, label: "Online Degree Programs" },
+  { icon: GraduationCap, label: "Professional Learning Programs" },
   { icon: Briefcase, label: "Job + Certification Programs" },
   { icon: Compass, label: "Career Development Programs" },
   { icon: Sparkles, label: "Skill-Based Learning Programs" },
