@@ -117,7 +117,7 @@ function Career247Page() {
         </div>
         <p className="mx-auto max-w-3xl text-muted-foreground">
           Pravis Learning connects students, graduates, and working professionals with Career247 for career-focused
-          online learning, certification programs, online degree guidance, and job-oriented skill development. Career247
+          online learning, certification programs, professional learning guidance, and job-oriented skill development. Career247
           offers industry-relevant programs designed to help learners improve their skills, prepare for career growth,
           and explore better job opportunities.
         </p>
