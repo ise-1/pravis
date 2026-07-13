@@ -70,10 +70,10 @@ function HomePage() {
               Build Your Future with <span className="text-gold">Pravis Learning</span>
             </h1>
             <p className="mt-5 max-w-xl text-base text-primary-foreground/85 sm:text-lg">
-              Your trusted partner for online degree admissions, career guidance, talent solutions, insurance support, and education franchise opportunities.
+              Your trusted partner for career guidance, talent solutions, insurance support, education franchise opportunities, study abroad partnerships, and professional learning.
             </p>
             <p className="mt-3 max-w-xl text-sm text-primary-foreground/70">
-              We help students, working professionals, businesses, and entrepreneurs choose the right path for growth.
+              We help students, professionals, businesses, and entrepreneurs build successful careers and business opportunities.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/contact" className="rounded-md bg-gold px-6 py-3 font-semibold text-gold-foreground transition-transform hover:scale-105">Enquire Now</Link>
