@@ -13,10 +13,10 @@ import { Testimonials } from "@/components/Testimonials";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pravis Learning Chennai | Online Degree Admission & Career Guidance" },
-      { name: "description", content: "Pravis Learning offers online UG and PG degree admission guidance, career support, franchise opportunities, and education services in Chennai. Get expert counselling today." },
-      { property: "og:title", content: "Pravis Learning Chennai | Online Degree Admission & Career Guidance" },
-      { property: "og:description", content: "Pravis Learning offers online degree admission guidance, franchise opportunities, career support, and education services in Chennai." },
+      { title: "Pravis Learning Chennai | Career Guidance & Professional Learning" },
+      { name: "description", content: "Pravis Learning offers career guidance, professional learning, franchise opportunities, talent solutions, study abroad partnerships, and insurance advisory in Chennai." },
+      { property: "og:title", content: "Pravis Learning Chennai | Career Guidance & Professional Learning" },
+      { property: "og:description", content: "Career guidance, professional learning, franchise opportunities, talent solutions, study abroad partnerships, and insurance advisory in Chennai." },
     ],
     links: [
       { rel: "preload", as: "image", href: heroImg, fetchPriority: "high" } as any,
@@ -33,12 +33,12 @@ const services = [
   { icon: Users, title: "Talent Support", desc: "Connect companies with skilled, job-ready candidates across industries.", to: "/talent-partner" },
 ];
 
-const programs = ["Online MBA","Online MCA","Online BBA","Online BCA","Online B.Com","Online M.Com","Digital Marketing","Data Analytics","IT Skill Courses","Study Abroad","Franchise Business"];
+const programs = ["Career Guidance","Professional Training","Digital Marketing","Data Analytics","IT Skill Courses","Study Abroad","Education Franchise","Talent Solutions","Insurance Advisory","Global Campus","G-TEC Partnership"];
 
 const reasons = [
   "Trusted education and career support company",
   "Experienced counselling team",
-  "Online degree admission guidance",
+  "Career guidance and professional learning",
   "Franchise opportunity support",
   "Career and talent solutions",
   "Transparent process",
@@ -64,16 +64,16 @@ function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 md:grid-cols-2 md:items-center md:py-24">
           <div className="text-primary-foreground">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-gold">
-              <Sparkles className="h-3 w-3" /> Education · Protection · Prosperity
+              <Sparkles className="h-3 w-3" /> Career · Learning · Opportunity
             </div>
             <h1 className="font-serif text-4xl font-bold leading-[1.1] sm:text-5xl md:text-6xl">
               Build Your Future with <span className="text-gold">Pravis Learning</span>
             </h1>
             <p className="mt-5 max-w-xl text-base text-primary-foreground/85 sm:text-lg">
-              Your trusted partner for online degree admissions, career guidance, talent solutions, insurance support, and education franchise opportunities.
+              Your trusted partner for career guidance, talent solutions, insurance support, education franchise opportunities, study abroad partnerships, and professional learning.
             </p>
             <p className="mt-3 max-w-xl text-sm text-primary-foreground/70">
-              We help students, working professionals, businesses, and entrepreneurs choose the right path for growth.
+              We help students, professionals, businesses, and entrepreneurs build successful careers and business opportunities.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/contact" className="rounded-md bg-gold px-6 py-3 font-semibold text-gold-foreground transition-transform hover:scale-105">Enquire Now</Link>
@@ -103,10 +103,10 @@ function HomePage() {
         <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">About Pravis Learning</div>
         <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">A Chennai-based education and career support company</h2>
         <p className="mx-auto mt-5 max-w-3xl text-muted-foreground">
-          We provide guidance for online degree programs, professional courses, franchise opportunities, talent support, and insurance advisory services.
+          We provide career guidance, professional learning, franchise opportunities, talent solutions, study abroad partnerships, and insurance advisory services.
         </p>
         <p className="mx-auto mt-3 max-w-3xl text-muted-foreground">
-          Whether you are a student looking for the right course, a working professional planning to upgrade your career, or an entrepreneur looking for a franchise opportunity, Pravis Learning is here to guide you.
+          Whether you are a student exploring career opportunities, a working professional upgrading your skills, or an entrepreneur seeking business opportunities, Pravis Learning is here to support your journey.
         </p>
       </section>
 
@@ -173,8 +173,8 @@ function HomePage() {
 
       {/* Popular programs */}
       <section className="mx-auto max-w-6xl px-4 py-20 text-center">
-        <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">Popular Programs</div>
-        <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">Programs in demand right now</h2>
+        <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">Services</div>
+        <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">Popular Services</h2>
         <div className="mt-8 flex flex-wrap justify-center gap-2">
           {programs.map((p) => (
             <span key={p} className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:border-gold hover:text-primary">{p}</span>

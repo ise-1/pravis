@@ -14,7 +14,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Pravis Learning — Chennai" },
-      { name: "description", content: "Reach out for online degrees, franchise opportunities, study abroad, talent or insurance services. Mon–Sat 10AM–6PM, Chennai." },
+      { name: "description", content: "Reach out for career guidance, franchise opportunities, study abroad partnerships, talent solutions, or insurance services. Mon–Sat 10AM–6PM, Chennai." },
       { property: "og:title", content: "Contact Pravis Learning" },
       { property: "og:description", content: "We're here to guide you." },
     ],
@@ -23,9 +23,9 @@ export const Route = createFileRoute("/contact")({
 });
 
 const faqs = [
-  { q: "What services does Pravis Learning provide?", a: "Online degree admission guidance, franchise opportunity support, study abroad partnership, talent partner services, and insurance advisory." },
-  { q: "Do you provide online degree admission support?", a: "Yes — we help students and working professionals choose suitable online UG and PG programs from recognized universities." },
-  { q: "Can working professionals apply for online degree programs?", a: "Yes. Online programs are designed with flexible learning options ideal for working professionals." },
+  { q: "What services does Pravis Learning provide?", a: "Career guidance, professional learning, franchise opportunity support, study abroad partnership, talent partner services, and insurance advisory." },
+  { q: "Do you provide career guidance support?", a: "Yes — we help students and working professionals choose suitable career paths and professional learning programs." },
+  { q: "Can working professionals access your services?", a: "Yes. Our programs and partnerships are designed with flexible learning options ideal for working professionals." },
   { q: "Do you provide franchise opportunity guidance?", a: "Yes — for both G-TEC franchise and Global Campus partner opportunities." },
   { q: "How can I contact Pravis Learning?", a: "Phone, email, WhatsApp, or by submitting the enquiry form on our website." },
   { q: "Do you provide study abroad support?", a: "Yes, through our Global Campus partner services — covering course, country, admission and visa guidance." },
@@ -107,7 +107,7 @@ function Page() {
 
   return (
     <>
-      <PageHero eyebrow="Contact" title="We Are Here to Guide You" subtitle="Have questions about online degrees, franchise opportunities, study abroad partnership, hiring support, or insurance services? Contact Pravis Learning today." />
+      <PageHero eyebrow="Contact" title="We Are Here to Guide You" subtitle="Have questions about career guidance, franchise opportunities, study abroad partnership, hiring support, or insurance services? Contact Pravis Learning today." />
 
       <section className="mx-auto max-w-6xl px-4 py-20">
         <div className="grid gap-10 md:grid-cols-2">
@@ -146,7 +146,7 @@ function Page() {
                   <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Interested Service *</label>
                   <select name="interested_service" required className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:border-primary focus:outline-none">
                     <option value="">Select a service</option>
-                    <option>Online Degree Admission</option>
+                    <option>Career Guidance</option>
                     <option>G-TEC Franchise</option>
                     <option>Global Campus Partner</option>
                     <option>PrepInsta Placement Training</option>
