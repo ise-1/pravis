@@ -13,10 +13,10 @@ import { Testimonials } from "@/components/Testimonials";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pravis Learning Chennai | Online Degree Admission & Career Guidance" },
-      { name: "description", content: "Pravis Learning offers online UG and PG degree admission guidance, career support, franchise opportunities, and education services in Chennai. Get expert counselling today." },
-      { property: "og:title", content: "Pravis Learning Chennai | Online Degree Admission & Career Guidance" },
-      { property: "og:description", content: "Pravis Learning offers online degree admission guidance, franchise opportunities, career support, and education services in Chennai." },
+      { title: "Pravis Learning Chennai | Career Guidance & Professional Learning" },
+      { name: "description", content: "Pravis Learning offers career guidance, professional learning, franchise opportunities, talent solutions, study abroad partnerships, and insurance advisory in Chennai." },
+      { property: "og:title", content: "Pravis Learning Chennai | Career Guidance & Professional Learning" },
+      { property: "og:description", content: "Career guidance, professional learning, franchise opportunities, talent solutions, study abroad partnerships, and insurance advisory in Chennai." },
     ],
     links: [
       { rel: "preload", as: "image", href: heroImg, fetchPriority: "high" } as any,
