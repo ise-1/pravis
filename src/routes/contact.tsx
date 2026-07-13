@@ -146,7 +146,7 @@ function Page() {
                   <label className="mb-1 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Interested Service *</label>
                   <select name="interested_service" required className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:border-primary focus:outline-none">
                     <option value="">Select a service</option>
-                    <option>Online Degree Admission</option>
+                    <option>Career Guidance</option>
                     <option>G-TEC Franchise</option>
                     <option>Global Campus Partner</option>
                     <option>PrepInsta Placement Training</option>
