@@ -103,10 +103,10 @@ function HomePage() {
         <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">About Pravis Learning</div>
         <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">A Chennai-based education and career support company</h2>
         <p className="mx-auto mt-5 max-w-3xl text-muted-foreground">
-          We provide guidance for online degree programs, professional courses, franchise opportunities, talent support, and insurance advisory services.
+          We provide career guidance, professional learning, franchise opportunities, talent solutions, study abroad partnerships, and insurance advisory services.
         </p>
         <p className="mx-auto mt-3 max-w-3xl text-muted-foreground">
-          Whether you are a student looking for the right course, a working professional planning to upgrade your career, or an entrepreneur looking for a franchise opportunity, Pravis Learning is here to guide you.
+          Whether you are a student exploring career opportunities, a working professional upgrading your skills, or an entrepreneur seeking business opportunities, Pravis Learning is here to support your journey.
         </p>
       </section>
 
