@@ -26,7 +26,7 @@ export const Route = createFileRoute("/career247")({
       {
         name: "description",
         content:
-          "Pravis Learning connects students and professionals with Career247 for digital marketing, data analytics, business analytics, online degree programs, certification courses, and career-focused skill development.",
+          "Pravis Learning connects students and professionals with Career247 for digital marketing, data analytics, business analytics, professional learning, certification courses, and career-focused skill development.",
       },
       { property: "og:title", content: "Career247 Career-Focused Learning Partner | Pravis Learning" },
       {
