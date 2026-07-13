@@ -283,7 +283,7 @@ function Career247Page() {
           <h2 className="font-serif text-3xl font-bold sm:text-4xl">Want to Know More About Career247?</h2>
           <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/85">
             Connect with Pravis Learning to explore Career247 programs in digital marketing, data analytics, business
-            analytics, online degrees, and career-focused skill development.
+            analytics, professional learning, and career-focused skill development.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <Link
