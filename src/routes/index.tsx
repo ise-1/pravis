@@ -173,8 +173,8 @@ function HomePage() {
 
       {/* Popular programs */}
       <section className="mx-auto max-w-6xl px-4 py-20 text-center">
-        <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">Popular Programs</div>
-        <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">Programs in demand right now</h2>
+        <div className="text-xs font-semibold uppercase tracking-[0.25em] text-maroon">Popular Services</div>
+        <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">Popular Services</h2>
         <div className="mt-8 flex flex-wrap justify-center gap-2">
           {programs.map((p) => (
             <span key={p} className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:border-gold hover:text-primary">{p}</span>
