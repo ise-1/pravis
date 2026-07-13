@@ -33,7 +33,7 @@ const services = [
   { icon: Users, title: "Talent Support", desc: "Connect companies with skilled, job-ready candidates across industries.", to: "/talent-partner" },
 ];
 
-const programs = ["Online MBA","Online MCA","Online BBA","Online BCA","Online B.Com","Online M.Com","Digital Marketing","Data Analytics","IT Skill Courses","Study Abroad","Franchise Business"];
+const programs = ["Career Guidance","Professional Training","Digital Marketing","Data Analytics","IT Skill Courses","Study Abroad","Education Franchise","Talent Solutions","Insurance Advisory","Global Campus","G-TEC Partnership"];
 
 const reasons = [
   "Trusted education and career support company",
