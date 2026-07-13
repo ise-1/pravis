@@ -107,7 +107,7 @@ function Page() {
 
   return (
     <>
-      <PageHero eyebrow="Contact" title="We Are Here to Guide You" subtitle="Have questions about online degrees, franchise opportunities, study abroad partnership, hiring support, or insurance services? Contact Pravis Learning today." />
+      <PageHero eyebrow="Contact" title="We Are Here to Guide You" subtitle="Have questions about career guidance, franchise opportunities, study abroad partnership, hiring support, or insurance services? Contact Pravis Learning today." />
 
       <section className="mx-auto max-w-6xl px-4 py-20">
         <div className="grid gap-10 md:grid-cols-2">
