@@ -23,9 +23,9 @@ export const Route = createFileRoute("/contact")({
 });
 
 const faqs = [
-  { q: "What services does Pravis Learning provide?", a: "Online degree admission guidance, franchise opportunity support, study abroad partnership, talent partner services, and insurance advisory." },
-  { q: "Do you provide online degree admission support?", a: "Yes — we help students and working professionals choose suitable online UG and PG programs from recognized universities." },
-  { q: "Can working professionals apply for online degree programs?", a: "Yes. Online programs are designed with flexible learning options ideal for working professionals." },
+  { q: "What services does Pravis Learning provide?", a: "Career guidance, professional learning, franchise opportunity support, study abroad partnership, talent partner services, and insurance advisory." },
+  { q: "Do you provide career guidance support?", a: "Yes — we help students and working professionals choose suitable career paths and professional learning programs." },
+  { q: "Can working professionals access your services?", a: "Yes. Our programs and partnerships are designed with flexible learning options ideal for working professionals." },
   { q: "Do you provide franchise opportunity guidance?", a: "Yes — for both G-TEC franchise and Global Campus partner opportunities." },
   { q: "How can I contact Pravis Learning?", a: "Phone, email, WhatsApp, or by submitting the enquiry form on our website." },
   { q: "Do you provide study abroad support?", a: "Yes, through our Global Campus partner services — covering course, country, admission and visa guidance." },
