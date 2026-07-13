@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
-import { Testimonials } from "@/components/Testimonials";
 import { Heart, ShieldCheck, Sprout, Award, HandHeart } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
@@ -82,8 +81,6 @@ function AboutPage() {
           ))}
         </div>
       </section>
-
-      <Testimonials eyebrow="Voices of Trust" title="Stories from those we've helped" />
 
       <CTASection
         title="Start Your Journey with Pravis Learning"
