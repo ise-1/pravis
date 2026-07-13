@@ -64,7 +64,7 @@ function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 md:grid-cols-2 md:items-center md:py-24">
           <div className="text-primary-foreground">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-gold">
-              <Sparkles className="h-3 w-3" /> Education · Protection · Prosperity
+              <Sparkles className="h-3 w-3" /> Career · Learning · Opportunity
             </div>
             <h1 className="font-serif text-4xl font-bold leading-[1.1] sm:text-5xl md:text-6xl">
               Build Your Future with <span className="text-gold">Pravis Learning</span>
