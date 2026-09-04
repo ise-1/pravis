@@ -53,8 +53,20 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 py-5 text-center text-xs text-primary-foreground/70">
-          © {new Date().getFullYear()} Pravis Learning. All rights reserved.
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-primary-foreground/70 md:flex-row">
+          <span>© {new Date().getFullYear()} Pravis Learning. All rights reserved.</span>
+          <span>
+            Designed & Developed by{" "}
+            <a
+              href="https://wearealro.lovable.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit ALRO – Website Design & Digital Marketing Agency"
+              className="font-semibold text-gold transition-colors hover:text-gold/80"
+            >
+              ALRO
+            </a>
+          </span>
         </div>
       </div>
     </footer>
